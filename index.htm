@@ -7,86 +7,168 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        /*Main Page*/
+        body, html{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        /*----------------------------*/
+        /*Container to hold CV*/
+        .cv-container{
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 210/297;
+            display: flex;
+            justify-content: center;
+        }
+        /*----------------------------*/
+        /*A4 styling, main content*/
+        .cv-content{
+            width: 100%;
+            height: 100%;
+            max-width: 210mm;
+            max-height: 297mm;
+            margin: 0 auto;
+            padding: 10mm;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            box-sizing: border-box;
+        }
+        /*-----------------------------*/
+        /*Header Styling*/
+        .header{
+            background-color: #0a4a83;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic{
+            width: 60px;
+            height: 70px;
+            background-color: white;
+            margin-right: 15px;
+            border-radius: 25%;
+        }
+
+        .contact-info{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 5px 20px;
+            font-size: 0.9em;
+        }
+
+        .name{
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        /*----------------------------*/
+        /*Styling sections*/
+
+        .section{
+            margin-top: 10px;
+            padding: 10px 0;
+            border-top: solid #ccc;
+        }
+
+        .section h2{
+            font-size: 1.2em;
+            color: #0a4a83;
+            margin: 0 0 5px;
+        }
+
+        .section p, .section ul{
+            margin: 5px 0 ;
+            font-size: 0.9em;
+        }
+
+
+        /*Responsive Adjustment*/
+        @media(max-width: 760px){
+            body, html{
+                padding: 10px;
+                overflow-y: auto;
+            }
+
+            .cv-content{
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <img align="left" src="mohakpic.jpg" alt="Candidate Picture" width="180" height="200">
+    <!--Wrapper for A4 layout / reposiveness-->
+    <div class="cv-container">
+        <div class="cv-content">
 
-    <table align="right" border="0" width="1145" height="57" bgcolor="lightblue" >
-        <tr>
-            <td  width="200" align="right"><h1 align="center"><u>Mohak Sharma</u></h1></td> 
-            <td  width="200" > <strong></strong></td>
-            <td  width="200" > <strong></strong></td>
-            
-            
-        </tr>
-
-    </table>
-    <table align="right" border="0" width="1145" height="57" bgcolor="lightblue" >
-        <tr>
-            <td  width="200" align="center"> <strong></strong> <i class="fa-solid fa-envelope"></i> mohaksharma34@gmail.com </td> 
-            <td width="200" align="left" > <strong></strong> <i class="fa-solid fa-house"></i> Hyderabad, Pakistan. </td>           
-            <td  width="200" > <strong></strong></td>
-        </tr>
-    </table>
-    <table align="right" border="0" width="1145" height="56" bgcolor="lightblue" >
-        <tr>
-            <td  width="200" align="center"> <strong></strong> <i class="fa-solid fa-phone"></i> +92 3452541703</td>
-            <td width="200" > <strong></strong> <i class="fa-brands fa-linkedin"></i> www.linkedin.com/in/mohak-sharma-932342325</td>
-            <td  width="200" > <strong></strong></td>
-            
-        </tr>  
-    </table>   
-    <table align="center" border="5" width="1335"></table>
-    <h1 align="center"><b><u>PROFILE</u></b></h1>
-    <p align="center"> A Software Engineer from Mehran University of 
-        Engineering and Technology, with experience in building complicated C++ 
-        and Java projects.</p>
-        <p align="center">Can manage social media accounts for advertisements, etc.</p>
-        <p align="center">Also experienced in software like Capcut and Canva.</p>
-        <p align="center">Keen on working as a full-time sofware developer and visual graphics artist. </p>
-
-    <table align="center" border="1" width="1325"></table>
-    <h1 align="center"><b><u>EDUCATION</u></b></h1>
-    <h3 align="center"><b><em title="Near Sindh, LUMS and agrcultural ">Mehran University | Jamshoro, Pakistan </em></b>---------------------------------------------------08/24-08/28</h3>
-    <h4 align="center">Bachelor of Engineering in Software Engineering </h4>
-    <h4 align="center"><i>Predicted Grade: </i> (only after completion of degree)N/A</h4>
-    <h4 align="center"><i>Key Modules: </i>  (only after completion of degree)Key Modules Names</h4>
-    <h4 align="center"><i>Dissertation: </i> ‘Name of Dissertation’(research papers,etc.)</h4>
-    <h4 align="center"><i>Award: </i> Name of the Awards</h4>
+            <!--Header section,profile pic,content info-->
+            <div class="header">
+                <div class="profile-pic">
+                    <div>
+                        <div class="name"> Mohak Sharma</div>
+                        <div class="contact-info">
+                            <div > mohaksharma34@gmail.com</div>
+                            <div > +92 3452541703</div>
+                            <div > Hyderabad, Pakistan</div>
+                            <div > mohak-sharma-932342325</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-    <h3 align="center"><b><em title="In G.O.R colony, Thandi sarak">Superior College Of Science | Hyderabad, Pakistan</em></b>--------------------------------------------------08/22-08/24</h3>
-    <h4 align="center">Intermediate (11th and 12th), General Science(Specialized in Mathematics) </h4>                                                                       
-    <h4 align="center">Subjects: Mathematics (A), Physics (A), Chemistry (A)</h4>
+            <!-- Body sections, headers, contents-->
+            <div class="section">
+                <h2>Profile</h2>
+                <p> A Software Engineer with experience in building C++ & HTML projects. Also experienced in video editing software like capcut and filmora, with a background in graphic designing like canva and photoshop.</p>
 
-    <h3 align="center"><b><em title="Behind Dawood supermarket">Rocksford Cambridge School | Hyderabad, Pakistan</em></b>--------------------------------------------------08/20-08/22</h3>
-    <h4 align="center">Matriculation(9th and 1oth), General Science(Specialized in Biology)</h4>                                                                       
-    <h4 align="center">Subjects: Biology (A), Physics (A), Chemistry (A)</h4>
+            </div>
 
-    <table align="center" border="1" width="1325"></table>
-    <h1 align="center"><b><u>VOLUNTEERING</u></b></h1>
-    <h3 align="center">No volunteering participations yet</h3>
-    <h3 align="center"></h3>
-    <h4 align="center"></h4>
-    <table align="center" border="1" width="1325"></table>
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>University: </strong> Mehran University of Science and Technology, 2028</li>
+                    <li><strong>Collage: </strong> Superior College of Science, 2024</li>
+                    <li><strong>School: </strong> Rockford Cambridge School, 2022</li>
+                </ul>
+            </div>
 
+            <div class="section">
+                <h2>Volunteering</h2>
+                <p>-coming soon-</p>
+            </div>
 
+            <div class="section">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>-coming soon-</li>
+                    <li>-coming soon-</li>
+                    <li>-coming soon-</li>
+                </ul>
+            </div>
 
-    <h1 align="center"><b><u>ACHIEVEMENTS</u></b></h1>
-    <h3 align="center">No achievements yet</h3>
-    <h3 align="center">Winner of...</h3>    
+            <div class="section">
+                <h2>Additionals skills</h2>
+                <p>-coming soon</p>
+            </div>
 
-    <table align="center" border="1" width="1325"></table>
-    <h1 align="center"><b><u>ADDITIONAL SKILLS</u></b></h1>
-    <h3 align="center"><i>Languages:</i>Sindhi(native) , Urdu(fluent), English(fluent)</h3>
-    <h3 align="center"><i>Microsoft Office:</i>Proficient in Word, Excel and PowerPoint</h3>  
-    <h3 align="center"><i>Skill:</i>Proficient in Canva motion graphics and text graphics, Capcut keyframes, captions, and animatons. </h3>
-   
-    <table align="center" border="1" width="1325"></table>
-    <h1 align="center"><b><u>HOBBIES &amp; INTERESTS</u></b></h1>
-    <h3 align="center"> HOBBIES: </h3>
-    <h4 align="center"> Book Reading: Read atleast 25 pages a day. Read  100+ books to date.</h4>
-    <h4 align="center"> Fitness: Go to the Gym atleast 4 times per week. Target all muscle groups. </h4>
-
-
+            <div class="section">
+                <h2>Hobbies and Interests</h2>
+                <p>-coming soon-</p>
+            </div>
+        </div>
+    </div>
 </body></html>
